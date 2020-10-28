@@ -1,0 +1,15 @@
+version: "3"
+services:
+  api:
+    build: ./api
+    restart: on-failure
+    container_name: api
+    volumes:
+      - ./api:/app
+
+  client:
+    build: ./client
+    restart: on-failure
+    container_name: client
+    volumes:
+      - ./client:/app
