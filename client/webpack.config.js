@@ -6,6 +6,12 @@ module.exports = {
   mode: 'development',
   entry: './src/index.js',
   devtool: 'inline-source-map',
+  devServer: {
+    hot: true,
+    hotOnly: true,
+    port: 9000,
+    contentBase: './dist'
+  },
   module: {
     rules: [
       {
